@@ -5,12 +5,10 @@
 */
 
 (function($) {
-
 	var	$window = $(window),
 		$body = $('body'),
 		$wrapper = $('#wrapper');
 
-		/*
 	// Breakpoints.
 		breakpoints({
 			xlarge:   [ '1281px',  '1680px' ],
@@ -20,9 +18,9 @@
 			xsmall:   [ '361px',   '480px'  ],
 			xxsmall:  [ null,      '360px'  ]
 		});
-		*/
 
 	// Play initial animations on page load.
+	
 		$window.on('load', function() {
 			window.setTimeout(function() {
 				$body.removeClass('is-preload');

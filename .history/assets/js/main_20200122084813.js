@@ -5,12 +5,14 @@
 */
 
 (function($) {
-
 	var	$window = $(window),
 		$body = $('body'),
 		$wrapper = $('#wrapper');
 
-		/*
+		window.setTimeout(function() {
+			$body.removeClass('is-preload');
+		}, 100);
+
 	// Breakpoints.
 		breakpoints({
 			xlarge:   [ '1281px',  '1680px' ],
@@ -20,15 +22,15 @@
 			xsmall:   [ '361px',   '480px'  ],
 			xxsmall:  [ null,      '360px'  ]
 		});
-		*/
 
 	// Play initial animations on page load.
+	/*
 		$window.on('load', function() {
 			window.setTimeout(function() {
 				$body.removeClass('is-preload');
 			}, 100);
 		});
-
+*/
 	// Browser fixes.
 
 		// IE: Flexbox min-height bug.
@@ -153,6 +155,7 @@
 				.wrapInner('<div class="inner"></div>');
 
 	// Gallery.
+	alert("ok. line 158");
 		$('.gallery')
 			.wrapInner('<div class="inner"></div>')
 			.prepend(browser.mobile ? '' : '<div class="forward"></div><div class="backward"></div>')
